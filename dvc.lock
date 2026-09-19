@@ -1,0 +1,9 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python -m src.data.download
+    outs:
+    - path: data/raw/telco_churn.csv
+      hash: md5
+      md5: 3b0bfab28a8101b4e4fdd08025a5c235
+      size: 970457

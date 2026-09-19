@@ -1,0 +1,5 @@
+stages:
+  download:
+    cmd: python -m src.data.download
+    outs:
+      - data/raw/telco_churn.csv

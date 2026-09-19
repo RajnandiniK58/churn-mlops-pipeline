@@ -1,0 +1,11 @@
+# Virtual env
+.venv/
+
+# MLflow local tracking
+mlruns/
+mlflow.db
+
+# Misc
+.ipynb_checkpoints/
+__pycache__/
+.env
