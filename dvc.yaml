@@ -3,3 +3,13 @@ stages:
     cmd: python -m src.data.download
     outs:
       - data/raw/telco_churn.csv
+
+  validate:
+    cmd: python -m src.data.validate
+    deps:
+      - data/raw/telco_churn.csv
+      - src/data/validate.py
+      - src/data/schemas.py
+    metrics:
+      - reports/validation.json:
+          cache: false

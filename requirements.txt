@@ -7,3 +7,4 @@ pyyaml
 dvc
 mlflow
 pytest
+pandera

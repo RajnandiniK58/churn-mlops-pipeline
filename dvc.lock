@@ -7,3 +7,23 @@ stages:
       hash: md5
       md5: 3b0bfab28a8101b4e4fdd08025a5c235
       size: 970457
+  validate:
+    cmd: python -m src.data.validate
+    deps:
+    - path: data/raw/telco_churn.csv
+      hash: md5
+      md5: 3b0bfab28a8101b4e4fdd08025a5c235
+      size: 970457
+    - path: src/data/schemas.py
+      hash: md5
+      md5: dbaf7915acf9629d0d543b4b0c15122a
+      size: 3158
+    - path: src/data/validate.py
+      hash: md5
+      md5: 3c7fde8fd9f48444ad18a84596c2b462
+      size: 1378
+    outs:
+    - path: reports/validation.json
+      hash: md5
+      md5: dc1056291a147d7c7163011c5e3bbd53
+      size: 79

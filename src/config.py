@@ -9,7 +9,7 @@ RAW_DATA_URL = (
 RAW_DATA_PATH = ROOT_DIR / "data" / "raw" / "telco_churn.csv"
 PROCESSED_DIR = ROOT_DIR / "data" / "processed"
 MODELS_DIR = ROOT_DIR / "models"
-
+REPORTS_DIR = ROOT_DIR / "reports"
 
 TARGET = "Churn"
 ID_COL = "customerID"
