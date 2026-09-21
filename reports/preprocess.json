@@ -1,0 +1,6 @@
+{
+  "train_rows": 5625,
+  "test_rows": 1407,
+  "train_churn_rate": 0.2658,
+  "test_churn_rate": 0.2658
+}

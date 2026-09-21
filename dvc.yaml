@@ -13,3 +13,20 @@ stages:
     metrics:
       - reports/validation.json:
           cache: false
+
+  preprocess:
+    cmd: python -m src.features.preprocess
+    deps:
+      - data/raw/telco_churn.csv
+      - reports/validation.json
+      - src/features/preprocess.py
+      - src/data/schemas.py
+    params:
+      - data.test_size
+      - data.random_state
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+    metrics:
+      - reports/preprocess.json:
+          cache: false

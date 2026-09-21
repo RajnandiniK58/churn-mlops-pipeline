@@ -1,4 +1,6 @@
 {
-  "passed": 0,
-  "rows": 7043
+  "passed": 1,
+  "rows": 7043,
+  "columns": 21,
+  "churn_rate": 0.2654
 }
