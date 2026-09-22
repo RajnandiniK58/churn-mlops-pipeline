@@ -13,6 +13,8 @@ REPORTS_DIR = ROOT_DIR / "reports"
 TRAIN_PATH = PROCESSED_DIR / "train.csv"
 TEST_PATH = PROCESSED_DIR / "test.csv"
 PARAMS_PATH = ROOT_DIR / "params.yaml"
+MODEL_PATH = MODELS_DIR / "model.joblib"
+
 
 TARGET = "Churn"
 ID_COL = "customerID"

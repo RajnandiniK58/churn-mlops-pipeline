@@ -63,3 +63,48 @@ stages:
       hash: md5
       md5: ebfa6fadeb6e232d1c9356e1a3f54dc1
       size: 109
+  train:
+    cmd: python -m src.models.train
+    deps:
+    - path: data/processed/test.csv
+      hash: md5
+      md5: e8036caed49d43e358e76ad2c30defdd
+      size: 178971
+    - path: data/processed/train.csv
+      hash: md5
+      md5: e2d2cec0a705d5a8267651476867a69d
+      size: 712212
+    - path: src/features/preprocess.py
+      hash: md5
+      md5: f5685800d53e4baf51ed81d50d86b01b
+      size: 4585
+    - path: src/models/train.py
+      hash: md5
+      md5: 081d4dbde3be6db96d98934c939c4bbe
+      size: 4831
+    params:
+      params.yaml:
+        data.random_state: 42
+        train:
+          val_size: 0.2
+          n_estimators_max: 1000
+          early_stopping_rounds: 30
+          learning_rate: 0.05
+          max_depth: 4
+          min_child_weight: 1
+          subsample: 0.8
+          colsample_bytree: 0.8
+          reg_lambda: 1.0
+    outs:
+    - path: models/model.joblib
+      hash: md5
+      md5: 40304e74f7627a63bf7412d47b47628c
+      size: 140377
+    - path: reports/feature_importance.csv
+      hash: md5
+      md5: e7dc7f6cf30a02da5ad4d566c8cac905
+      size: 1308
+    - path: reports/train_metrics.json
+      hash: md5
+      md5: 9cc00d3f823b33c9ffc55277f0e81efd
+      size: 241

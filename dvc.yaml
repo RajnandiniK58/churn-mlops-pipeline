@@ -30,3 +30,21 @@ stages:
     metrics:
       - reports/preprocess.json:
           cache: false
+
+  train:
+    cmd: python -m src.models.train
+    deps:
+      - data/processed/train.csv
+      - data/processed/test.csv
+      - src/features/preprocess.py
+      - src/models/train.py
+    params:
+      - data.random_state
+      - train
+    outs:
+      - models/model.joblib
+      - reports/feature_importance.csv:
+          cache: false
+    metrics:
+      - reports/train_metrics.json:
+          cache: false
